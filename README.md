@@ -13,7 +13,9 @@ opencv: 4.8.1.78
 
 
 Apply the model to the video(Learned from https://neuraspike.com/blog/realtime-emotion-detection-system-pytorch-opencv/)
-command:
+
+Command:
+
 cd Video
 python3 emotion_recognition.py -i video/Sai.mov --model output/model_resNet_10.pth  --prototxt model/deploy.prototxt.txt  --caffemodel model/res10_300x300_ssd_iter_140000_fp16.caffemodel
 
