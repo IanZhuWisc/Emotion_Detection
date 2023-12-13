@@ -41,6 +41,11 @@ Check the experiment results and discussions in the `Experiments/Results` sectio
 3. Set up your environment and install dependencies as specified in the project documentation.
 
 ## Usage
-commands
+
+Apply the model to the video(Learned from https://neuraspike.com/blog/realtime-emotion-detection-system-pytorch-opencv/)
+
+cd Video
+
+python3 emotion_recognition.py -i video/Sai.mov --model output/model_resNet_10.pth  --prototxt model/deploy.prototxt.txt  --caffemodel model/res10_300x300_ssd_iter_140000_fp16.caffemodel
 
 
