@@ -5,12 +5,6 @@ This module contains all configuration parameters and hyperparameters for the
 emotion recognition system. It provides a centralized location for managing
 training parameters, data paths, and model configurations.
 
-Notes:
-- The real-time demo (`Video/emotion_recognition.py`) converts frames to
-  48x48, 3-channel (grayscale replicated to RGB) to feed a ResNet backbone.
-- Class index mapping must align with the training pipeline and the demo:
-  0: angry, 1: disgust, 2: fear, 3: happy, 4: neutral, 5: sad, 6: surprise.
-
 Key Configuration Areas:
 - Dataset paths and splits
 - Training hyperparameters
@@ -73,8 +67,7 @@ LR_SCHEDULER_FACTOR = 0.5     # Factor to multiply LR by when reducing
 # =============================================================================
 
 # Input image specifications
-# Real-time inference uses 3-channel input (grayscale replicated to RGB)
-INPUT_CHANNELS = 3     # 1 for grayscale, 3 for RGB
+INPUT_CHANNELS = 1     # 1 for grayscale, 3 for RGB
 INPUT_HEIGHT = 48      # Model input height
 INPUT_WIDTH = 48       # Model input width
 

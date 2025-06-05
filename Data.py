@@ -13,8 +13,14 @@ Date: 2024
 import os
 import cv2
 import numpy as np
-from keras.utils import to_categorical
-from keras.preprocessing.image import ImageDataGenerator
+
+# Prefer TensorFlow Keras; fall back to standalone Keras if available
+try:
+    from tensorflow.keras.utils import to_categorical
+    from tensorflow.keras.preprocessing.image import ImageDataGenerator
+except Exception:  # pragma: no cover - fallback for environments with standalone Keras
+    from keras.utils import to_categorical
+    from keras.preprocessing.image import ImageDataGenerator
 
 # Dataset paths
 TRAIN_PATH = 'FER2013/train'

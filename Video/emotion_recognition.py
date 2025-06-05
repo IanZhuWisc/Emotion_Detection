@@ -36,14 +36,17 @@ from torchvision import transforms
 from torchvision.models import resnet18
 from neuraspike import utils
 
-# Emotion class mapping for human-readable output
+# Emotion class mapping for human-readable output (7 classes)
+# The order aligns with the dataset/config mapping:
+# 0: angry, 1: disgust, 2: fear, 3: happy, 4: neutral, 5: sad, 6: surprise
 EMOTION_DICT = {
-    0: "Angry", 
-    1: "Fearful", 
-    2: "Happy", 
-    3: "Neutral",
-    4: "Sad", 
-    5: "Surprised"
+    0: "Angry",
+    1: "Disgust",
+    2: "Fear",
+    3: "Happy",
+    4: "Neutral",
+    5: "Sad",
+    6: "Surprise"
 }
 
 class EmotionRecognitionSystem:
